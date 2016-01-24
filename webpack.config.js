@@ -14,10 +14,13 @@ if(minimize) {
 
 module.exports = {
   entry: {
-    javascript: './src/main.js'
+    main: './src/main.js',
+    name: './src/name.js',
+    full: './src/full.js',
+    canvas: './src/canvas.js',
   },
   output: {
-    filename: 'app.js'
+    filename: '[name].js'
   },
   debug: true,
   devtool: 'source-map',

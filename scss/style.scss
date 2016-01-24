@@ -1,8 +1,26 @@
 //fonts
-$font_0: Georgia;
-$font_1: Times New Roman;
-$font_2: Serif;
 
 body {
-  font-family: $font_0, $font_1, $font_2;
+  font-family: "Raleway", "Open Sans", serif;
+  font-weight:800;
+  line-height: 1;
+  font-size: 3em;
+}
+
+.banner {
+  font-size:1.75em;
+}
+
+.sub-banner {
+  font-size: .87em;
+  letter-spacing: 0.3em;
+  font-weight:400;
+}
+
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  float: left;
 }

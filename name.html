@@ -1,0 +1,71 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>vis</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.js"></script>
+  <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+
+  <script>
+
+function setup() {
+  createCanvas(1200, 900, WEBGL);
+  ortho(-width/2, width/2, height/2, -height/2, 0.1, 100)
+  // perspective(60 / 180 * PI, width/height, 0.1, 100);
+
+}
+
+function draw() {
+  // orbitControl();
+  translate(-400,0)
+  push()
+  rotateY(sin(frameCount * 0.01));
+  box(30, 100, 30);
+  translate(50,140);
+  box(80, 30, 30);
+  translate(50,-140);
+  box(30, 100, 30);
+  translate(-50,-140);
+  box(80, 30, 30);
+  pop()
+
+  // angleMode(DEGREES);
+  push();
+  rotateY(sin(-frameCount * 0.01));
+  translate(240,0);
+  rotateZ(-PI/6.0);
+  box(30, 160, 30);
+  rotateZ((PI/3.0));
+  translate(120,100);
+  box(30, 160, 30);
+  pop();
+
+  push();
+  rotateY(sin(frameCount * 0.01));
+  translate(520,0);
+  box(30, 100, 30);
+  translate(100,80);
+  box(100, 30, 30);
+  translate(0,-200);
+  box(100, 30, 30);
+  pop();
+
+}
+  </script>
+
+
+</body>
+</html>
